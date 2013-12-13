@@ -1,0 +1,20 @@
+<!doctype HTML>
+<html>
+   <head>
+      <title>Being John Markovich</title>
+   </head>
+   <body>
+      <h1>Being John Markovich</h1>
+      <textarea id="text">He is a boy. She is a girl. He is young. She is younger.</textarea>
+      <a href="#" onclick="generate(); return false;"> Generate text!</a>
+      <p id="result"></p>
+      <script src="markovich.js"></script>
+      <script>
+         function generate() {
+            var markovich = new Markovich();
+            markovich.analyze(document.getElementById('text').value);
+            document.getElementById('result').innerHTML = markovich.gibberish(15);
+         }
+      </script>
+   </body>
+</html>
